@@ -945,23 +945,19 @@ void start_pump(void) {
 void usage() {
   /*
    #@@@ netrelay.1.md <%VERSION%>
-   ##@ % netrelay(1) <%VERSION%> | General Commands
-   ##@
-   ##@ # netrelay.1
-   ##@ :version: <%VERSION%>
    #@
-   #@ ## NAME
+   #@ # NAME
    #@
    #@ **netrelay** -- Relay _qemu_ VM traffic
    #@
-   #@ ## SYNOPSIS
+   #@ # SYNOPSIS
    #@
    #@ - **netrelay** [-v] [_src_] [_dest_]
    #@   - point-to-point connection
    #@ - **netrelay** [-v] **-l** _port_ [_target_ ...]
    #@   - server mode
    #@
-   #@ ## DESCRIPTION
+   #@ # DESCRIPTION
    #@
    #@ **netrelay** forwards traffic between _qemu_ VMs, other
    #@ **netrelay** instances, or Linux bridge interfaces.
@@ -975,14 +971,14 @@ void usage() {
    #@ connections and distributing traffic across all connected
    #@ clients.
    #@
-   #@ ## OPTIONS
+   #@ # OPTIONS
    #@
    #@ - **-l** _port_ : Enable server mode.
    #@ - _src_ | _dest_ | _target_ : Specify an end-point of
    #@   point-to-point connection or a target to connect the hub/server
    #@   mode on start-up.
    #@
-   #@ ## TARGETS
+   #@ # TARGETS
    #@
    #@ Specifying targets for point-to-point connections or server mode:
    #@
@@ -998,7 +994,7 @@ void usage() {
    #@   specify the _port_ number of the listening server.
    #@ - _bridge_ : specify a bridge to connect to.
    #@
-   #@ ## COMPATIBILITY
+   #@ # COMPATIBILITY
    #@
    #@ **netrelay** will interoperate with _qemu_ VM network interfaces
    #@ using `udp` mode, or tcp `server` or `client` modes.
@@ -1018,7 +1014,7 @@ void usage() {
    #@ try to re-connect later.  Using **netrelay** as a connecting
    #@ glue can be used to work around these problems.
    #@
-   #@ ## BUGS
+   #@ # BUGS
    #@
    #@ - **netrelay** only acts as a dumb hub. It does not try to
    #@   look into the frames *MAC destination* or *MAC source* address
@@ -1030,7 +1026,7 @@ void usage() {
    #@   until the client either disconnects or completes sending the
    #@   packet.
    #@
-   #@ ## TODO
+   #@ # TODO
    #@
    #@ - UDP connections, should be possible to do listen::target
    #@   listen and target must be different, IP address would
