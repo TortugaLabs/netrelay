@@ -1,5 +1,4 @@
-# netrelay.1
-:version: 1.0
+% netrelay(1) 1.0 | General commands
 
 ## NAME
 
@@ -71,12 +70,18 @@ glue can be used to work around these problems.
 
 ## BUGS
 
-**netrelay** only acts as a dumb hub. It does not try to
-look into the frames *MAC destination* or *MAC source* address
-to implement bridging/switching.  Similarly, network loops
-are not considered.
+- **netrelay** only acts as a dumb hub. It does not try to
+  look into the frames *MAC destination* or *MAC source* address
+  to implement bridging/switching.  Similarly, network loops
+  are not considered.
+- In server mode, packets are read synchronously, this means that
+  a client can completely stall the client. i.e. for example, if
+  the clients sends an incomplete packet, the server will block
+  until the client either disconnects or completes sending the
+  packet.
 
 ## TODO
+
 - UDP connections, should be possible to do listen::target
   listen and target must be different, IP address would
   default to 127.0.0.1
